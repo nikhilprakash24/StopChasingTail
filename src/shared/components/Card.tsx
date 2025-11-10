@@ -6,6 +6,7 @@ interface CardProps {
   hover?: boolean
   padding?: 'none' | 'sm' | 'md' | 'lg'
   className?: string
+  style?: React.CSSProperties
   onClick?: () => void
 }
 
@@ -15,6 +16,7 @@ export const Card = ({
   hover = false,
   padding = 'md',
   className = '',
+  style,
   onClick,
 }: CardProps) => {
   const baseStyles = 'rounded-2xl transition-all duration-300'
@@ -42,6 +44,7 @@ export const Card = ({
   return (
     <div
       className={`${baseStyles} ${variants[variant]} ${paddings[padding]} ${hoverStyles} ${clickableStyles} ${className}`}
+      style={style}
       onClick={onClick}
     >
       {children}

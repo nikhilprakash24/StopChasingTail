@@ -34,7 +34,7 @@ export const LoginForm = ({
     setFormData(prev => ({ ...prev, [field]: value }))
 
     // Clear field error on change
-    if (errors[field]) {
+    if (field in errors && errors[field as keyof ValidationErrors]) {
       setErrors(prev => ({ ...prev, [field]: undefined }))
     }
     if (authError) {
