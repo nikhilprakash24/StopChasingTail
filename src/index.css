@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Custom CSS variables for our app theme */
+:root {
+  --color-primary: #8b5cf6;
+  --color-secondary: #ec4899;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+}
